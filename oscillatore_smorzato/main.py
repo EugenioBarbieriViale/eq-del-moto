@@ -13,7 +13,7 @@ m = 0.5 # kg
 Dt = 0.01 # s
 g = 9.81 # m/s2
 k = 10 # N/m
-c = pow(7.20,-6) # kg/s
+c = 0.5 # kg/s
 A = 10 # m
 vi = 0 # m/s
 
