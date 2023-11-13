@@ -80,28 +80,6 @@ plt.ylabel("x(m)")
 plt.grid(visible=True)
 plt.legend()
 
-# Kinetic energy
-plt.figure()
-plt.plot(axis,ki, label="k")
-plt.hlines(0,0,N,colors="black")
-
-plt.title("Energia cinetica")
-plt.xlabel("t(s)")
-plt.ylabel("k(J)")
-plt.grid(visible=True)
-plt.legend()
-
-# Potential energy
-plt.figure()
-plt.plot(axis,u, label="u")
-plt.hlines(0,0,N,colors="black")
-
-plt.title("Energia potenziale")
-plt.xlabel("t(s)")
-plt.ylabel("u(J)")
-plt.grid(visible=True)
-plt.legend()
-
 # Mechanical energy
 plt.figure()
 plt.plot(axis,em, label="em")
