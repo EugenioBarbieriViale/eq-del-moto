@@ -33,6 +33,9 @@ v_fin = []
 T = round(2 * np.pi * np.sqrt(m/k),4)
 v_ang = np.sqrt(k/m)
 
+ki = [0.5*m*vi**2]
+u = [0.5*k*A**2]
+em = [ki[0]+u[0]]
 
 for i in n:
     x_fin.append(x_in[i] + v_in[i] * Dt + 0.5 * a[i] * Dt*Dt)
@@ -44,6 +47,9 @@ for i in n:
     x_in.append(x_fin[i])
     v_in.append(v_fin[i])
 
+    ki.append(0.5 * m * v_in[i]**2)
+    u.append(0.5 * k * x_in[i]**2)
+    em.append(ki[i] + u[i])
 
 # Graph 1
 plt.figure()
@@ -65,6 +71,17 @@ plt.hlines(0,0,N,colors="black")
 plt.title("Velocità (Periodo: {}s)".format(str(T)))
 plt.xlabel("t(s)")
 plt.ylabel("v(m/s)")
+plt.grid(visible=True)
+plt.legend()
+
+# Mechanical energy
+plt.figure()
+plt.plot(axis,em, label="em")
+plt.hlines(0,0,N,colors="black")
+
+plt.title("Energia meccanica")
+plt.xlabel("t(s)")
+plt.ylabel("e(J)")
 plt.grid(visible=True)
 plt.legend()
 
