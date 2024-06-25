@@ -1,1 +1,1 @@
-# E17-18
+# Soluzioni numeriche delle equazioni del moto
